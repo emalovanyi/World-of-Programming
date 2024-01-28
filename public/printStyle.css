@@ -1,0 +1,11 @@
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-family: serif;
+  }
+
+  header, nav, aside, footer {
+    display: none;
+  }
+}

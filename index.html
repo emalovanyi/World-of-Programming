@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Programming languages - Home</title>
+
+        <script>
+            // Declare searchTag in the global scope
+            let searchTag = '';
+
+            // Function to update searchTag value
+            function updateSearchTag() {
+                searchTag = document.getElementById("tag-input").value;
+            }
+
+            // Function to fetch and display articles
+            function fetchAndDisplayArticles() {
+                // Use the global searchTag variable
+                console.log("Fetching articles with tag: " + searchTag);
+
+                // Rest of your logic for fetching and displaying articles
+                // Make sure to include the searchTag parameter in your API request
+                // Example: const url = `${urlBase}/article/?tag=${encodeURIComponent(searchTag)}`;
+
+                // For demonstration purposes, I'll simply log the searchTag value here
+                console.log("Search tag value: " + searchTag);
+            }
+
+            // Function to handle "Go!" button click
+            function handleGoButtonClick() {
+                // Update searchTag first
+                updateSearchTag();
+
+                // Wait for a brief moment (e.g., 100 milliseconds) to ensure the value is set
+                setTimeout(function () {
+                    // Call fetchAndDisplayArticles after the delay
+                    fetchAndDisplayArticles();
+                }, 100);
+            }
+
+            // ... Other scripts or functions ...
+
+            // Ensure that the fetchAndDisplayArticles function is defined in the global scope
+            if (typeof fetchAndDisplayArticles !== 'function') {
+                console.error('fetchAndDisplayArticles is not defined');
+            }
+        </script>
+
+        <link rel="icon" type="image/x-icon" href="fig/title.png">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="public/styles.css" rel="stylesheet">
+        <link href="public/printStyle.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <!--nav-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Programming languages</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#welcome">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About me</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#main/1/1310">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#artInsert">To post</a></li>
+                        <li class="nav-item"><script src="https://accounts.google.com/gsi/client" async defer></script>
+                            <div class="loginButton" id="loginButton">
+                                <div id="g_id_onload"
+                                     data-client_id="314858521059-0ss42dso5d8hn5992mjf5qkcnnhge1vq.apps.googleusercontent.com"
+                                     data-callback="handleCredentialResponse" data-auto_prompt="false"></div>
+                                <div class="g_id_signin" data-locale="en" data-type="standard" data-size="large"
+                                     data-theme="filled_black" data-text="sign_in_with" data-shape="circle"
+                                     data-onsuccess="handleCredentialResponse"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a id="logoutButton" style="display: none;" class="nav-link px-lg-3 py-3 py-lg-4" onclick="logout()">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--nav-->
+
+        <!--head-->
+        <header class="masthead" style="background-image: url('fig/1.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h2>World of Programming</h2>
+                            <span class="subheading"><strong><span class="typing"></span></strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--head-->
+
+        <!--for pages-->
+        <div id="m"></div>
+        <main id="router-view">
+        </main>
+        <!--for pages-->
+
+        <!--footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://t.me/emalovanyi">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-telegram fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/in/yevheniimalovanyi/">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/emalovanyi">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Malovanyi Yevhenii 2023</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer-->
+
+        <!--welcome page-->
+        <script id="template-welcome" type="text/template">
+        <article>
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-preview">
+                        <a href="about.html">
+                            <h2 class="post-title">About developer and his blog</h2>
+                            <h4 class="post-subtitle">Some interesting information about blog and student`s life!</h4>
+                        </a>
+                    </div>
+                    <hr class="my-4" />
+
+                    <div class="post-preview">
+                        <a href="#main/1/1310">
+                            <h2 class="post-title">Different interesting articles</h2>
+                            <h4 class="post-subtitle">Here you can find a lot of different interesting articles from me and from users.</h4>
+                        </a>
+                    </div>
+                    <hr class="my-4" />
+
+                    <div class="post-preview">
+                        <a href="#artInsert">
+                            <h2 class="post-title">Let`s write your own blog!</h2>
+                            <h4 class="post-subtitle">You can easily create your own blog there and share your thoughts, and even you can have a feedback from users!</h4>
+                        </a>
+                    </div>
+                    <hr class="my-4" />
+
+                    <div class="post-preview">
+                        <a href="about.html">
+                            <h2 class="post-title">Do you want talk to me?</h2>
+                            <h4 class="post-subtitle">Here you can reach me and ask some questions:>)</h4>
+                        </a>
+                    </div>
+                    <hr class="my-4" />
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#main/1/1310">Read Blog →</a></div>
+                </div>
+            </div>
+        </div>
+            <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+        </article>
+        </script>
+        <!--welcome page-->
+
+        <!--buttons-->
+        <script id="template-main" type="text/template">
+            <section class="article-section mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            {{currPage}} of {{pageCount}} pages
+                        </h4>
+                    </div>
+                </div>
+            </section>
+
+            <nav class="article-nav d-flex justify-content-between mb-4">
+                {{#prevPage}}
+                <a href="#main/{{prevPage}}/{{pageCount}}" class="article-link btn btn-primary btn-sm">
+                    <strong><< Previous page</strong>
+                </a>
+                {{/prevPage}}
+                {{#nextPage}}
+                <a href="#main/{{nextPage}}/{{pageCount}}" class="article-link btn btn-primary btn-sm">
+                    <strong>Next page >></strong>
+                </a>
+                {{/nextPage}}
+            </nav>
+        </script>
+        <!--buttons-->
+
+        <!--blog-->
+        <script id="template-articles" type="text/template">
+            <div class="container">
+                <div class="row">
+                    <!-- Blog entries -->
+                    <div class="col-lg-8">
+                        {{#articles}}
+                        <!-- Featured blog post -->
+                        <div class="card mb-4">
+                            <a href="{{detailLink}}"><img class="card-img-top" src="fig/8.jpg" alt="..." /></a>
+                            <div class="card-body">
+                                <div class="small text-muted">by {{author}}</div>
+                                <h2 class="card-title">{{title}}</h2>
+                                <p class="card-text">{{{content}}}</p>
+                                <a class="btn btn-primary" href="{{detailLink}}">Read more →</a>
+                            </div>
+                        </div>
+                        {{/articles}}
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Search widget -->
+                        <div class="card mb-4" id="search-form">
+                            <div class="card-header">Search</div>
+                            <div class="card-body">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" id="tag-input" placeholder="Enter search tag..." aria-label="Enter search tag..." aria-describedby="button-search" oninput="updateSearchTag()">
+                                    <!-- Call handleGoButtonClick instead of fetchAndDisplayArticles directly -->
+                                    <button class="btn btn-primary" id="button-search" type="button" onclick="handleGoButtonClick()">Go!</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Categories widget -->
+                        <div class="card mb-4">
+                            <div class="card-header">Topics</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul class="list-unstyled mb-0">
+                                            <li><a href="https://www.spinxdigital.com/blog/12-web-design-tutorials-in-2020/">Web Design</a></li>
+                                            <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+                                            <li><a href="https://www.pinterest.com/codespacenp/freebies/">Freebies</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul class="list-unstyled mb-0">
+                                            <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
+                                            <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+                                            <li><a href="https://www.w3schools.com/cpp/">C++</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Side widget -->
+                        <div class="card mb-4">
+                            <div class="card-header">Maybe interesting...</div>
+                            <div class="card-body">I`m very glad to share a lot of interesting blogs with you. Be free to write feedbacks and share content!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+        </script>
+        <!--blog-->
+
+        <!--reading blog-->
+        <script id="template-article" type="text/template">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1">{{title}}</h1>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">by {{author}}</div>
+                            <!-- Post categories-->
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">{{tags}}</a>
+                        </header>
+                        {{#imageLink}}
+                        <!-- Preview image figure-->
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{{imageLink}}" alt="..." /></figure>
+                        {{/imageLink}}
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            {{{content}}}
+                        </section>
+                    </article>
+                    <!-- Comments section-->
+                    <section class="mb-5">
+
+                        <h3 class="text-center mb-4">Visitor Opinions</h3>
+
+                        <div class="row justify-content-center">
+                            {{#JSONComments}}
+                            {{#comments}}
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                                            <p class="text-secondary text-center">{{dateCreated}}</p>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <p>
+                                                <a style="text-decoration: none" class="float-left" href="https://github.com/emalovanyi"><strong>{{author}}</strong></a>
+                                            </p>
+                                            <div class="clearfix"></div>
+                                            <p>{{text}}</p>
+                                            <p>
+                                                <a style="text-decoration: none" class="float-right btn btn-outline-primary ml-2" onclick="location.href='#form-wrap'"> <i class="fa fa-reply"></i> Reply</a>
+                                                <a style="text-decoration: none" class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/comments}}
+                            {{/JSONComments}}
+                        </div>
+
+                        <nav>
+                            {{#prevComPage}}
+                            <a id="decrement-count" href="{{prevComPage}}" class="btn btn-secondary">&lt;&lt; Previous page</a>
+                            {{/prevComPage}}
+                            {{#nextComPage}}
+                            <a id="increment-count" href="{{nextComPage}}" class="btn btn-secondary">Next page &gt;&gt;</a>
+                            {{/nextComPage}}
+                        </nav>
+
+                        <div id="form-wrap" class="container mt-3">
+                            <label for="checkcontact" class="contactbutton"><span class="mail"></span></label><input id="checkcontact" type="checkbox">
+                            <form class="contactform">
+                                <div class="input-label-input">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="author" id="author3" size="50" maxlength="100" placeholder="Name"/>
+                                    </div>
+                                </div>
+                                <div class="input-label-input">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="title" id="title3" size="50" maxlength="100" pattern="\S[\S\s]*" placeholder="Comment"/>
+                                    </div>
+                                </div>
+                                <p class="submit_wrapper">
+                                    <a href="{{addComm}}" style="text-decoration: none" class="btn btn-secondary">Send</a>
+                                    <a href="#canselComm" style="text-decoration: none" class="btn btn-secondary">Cancel</a>
+                                </p>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Search widget -->
+                    <div class="card mb-4">
+                        <div class="card-header">Actions with blog</div>
+                        <div class="card-body d-flex justify-content-between">
+                            <button class="btn btn-primary" type="button" onclick="location.href='{{deleteLink}}'">Delete</button>
+                            <button class="btn btn-primary" type="button" onclick="location.href='{{editLink}}'">Edit</button>
+                        </div>
+                    </div>
+                    <!-- Categories widget -->
+                    <div class="card mb-4">
+                        <div class="card-header">Topics</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="https://www.spinxdigital.com/blog/12-web-design-tutorials-in-2020/">Web Design</a></li>
+                                        <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+                                        <li><a href="https://www.pinterest.com/codespacenp/freebies/">Freebies</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
+                                        <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+                                        <li><a href="https://www.w3schools.com/cpp/">C++</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side widget -->
+                    <div class="card mb-4">
+                        <div class="card-header">Maybe interesting...</div>
+                        <div class="card-body">I`m very glad to share a lot of interesting blogs with you. Be free to write feedbacks and share content!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+        </script>
+        <!--reading blog-->
+
+        <!-- writing blog-->
+        <script id="template-article-form" type="text/template">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <article class="article-container">
+                            <h2 class="text-center">{{formTitle}}</h2> <br>
+
+                            <form class="form-container" id="articleForm">
+                                <div class="form-group">
+                                    <label for="author" class="form-label"><strong>Author:</strong></label>
+                                    <input type="text" class="form-control" name="author" id="author" value="{{author}}"
+                                           size="50" maxlength="100" placeholder="e.g. Yevhenii Ludman" />
+                                </div><br>
+
+                                <div class="form-group">
+                                    <label for="title" class="form-label"><strong>Title:</strong></label>
+                                    <input type="text" class="form-control" name="title" id="title" value="{{title}}"
+                                           size="50" maxlength="100" pattern="\S[\S\s]*"
+                                           placeholder="e.g. My story." required
+                                           title="Article title, mandatory item, max. length: 100 characters. The first character must not be a space." />
+                                </div><br>
+
+                                <div class="form-group">
+                                    <label for="imageLink" class="form-label"><strong>Image (url):</strong></label>
+                                    <input type="url" class="form-control" name="imageLink" id="imageLink" value="{{imageLink}}"
+                                           size="50" title="Image URL, max. length 100 characters." maxlength="100" />
+                                </div><br>
+
+                                <div class="form-group">
+                                    <button class="btn btn-primary form-button" type="button" id="btShowFileUpload">
+                                        <strong>Upload image</strong>
+                                    </button>
+                                </div><br>
+
+                                <fieldset class="file-upload-container form-group hiddenElm" id="fsetFileUpload">
+                                    <legend class="file-upload-legend"><strong>Image Upload</strong></legend>
+                                    <input type="file" class="form-control-file" id="flElm" name="file"
+                                           accept="image/jpeg, image/png" />
+                                    <br><br>
+                                    <button class="btn btn-primary form-button" type="button" id="btFileUpload">
+                                        <strong>Send image to server</strong>
+                                    </button>
+                                    <button class="btn btn-secondary form-button" type="button" id="btCancelFileUpload">
+                                        <strong>Cancel uploading</strong>
+                                    </button>
+                                </fieldset><br>
+
+                                <div class="form-group">
+                                    <label for="content" class="form-label"><strong>Blog content:</strong></label>
+                                    <textarea class="form-control" name="content" id="content" spellcheck="true" lang="sk"
+                                              cols="50" rows="10" required
+                                              title="Article content, mandatory item, can be plain text or in HTML.">{{content}}</textarea>
+                                </div><br>
+
+                                <div class="form-group">
+                                    <label for="tags" class="form-label"><strong>Keywords:</strong></label>
+                                    <input type="text" class="form-control" name="tags" id="tags" value="{{tags}}" size="50"
+                                           title="Keyword list, comma separated."
+                                           placeholder="e.g. JS, programming" />
+                                </div><br>
+
+                                <div class="form-group">
+                                    <button class="btn btn-secondary form-button" type="reset"><strong>Reset Form</strong>
+                                    </button>
+                                    <button class="btn btn-primary form-button" type="submit"> {{submitBtTitle}} </button>
+                                </div>
+                            </form>
+                        </article>
+
+                        <footer class="text-center mt-4">
+                            <a href="{{backLink}}" class="btn btn-secondary"><strong>Back to blog</strong></a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+        </script>
+        <!-- writing blog-->
+
+        <!--JS-->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="js/scripts.js"></script>
+        <script type="module" src="js/index.js"></script>
+        <script src="js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!--JS-->
+
+        <script>
+            function decodeJwtResponse(credential) {
+                const [header, payload, signature] = credential.split(".");
+                const decodedPayload = JSON.parse(atob(payload));
+
+                return decodedPayload;
+            }
+
+            function handleCredentialResponse(response) {
+                const credential = response.credential;
+                const decodedPayload = decodeJwtResponse(credential);
+
+                console.log("Decoded Payload:", decodedPayload);
+
+                localStorage.setItem("isLoggedIn", "true");
+                localStorage.setItem("userId", decodedPayload.sub);
+                localStorage.setItem("userName", decodedPayload.given_name);
+                localStorage.setItem("userEmail", decodedPayload.email);
+
+                // Auto-populate the form fields
+                const authorField = document.getElementById("author");
+                const combinedName = `${decodedPayload.given_name} ${decodedPayload.family_name}`;
+                authorField.value = combinedName;
+
+                document.getElementById("loginButton").style.display = "none";
+                document.getElementById("logoutButton").style.display = "inline-block";
+            }
+
+            function logout() {
+                // Check if the user is logged in
+                if (localStorage.getItem("isLoggedIn") === "true") {
+                    // Clear the user's session data from local storage
+                    localStorage.removeItem("isLoggedIn");
+                    localStorage.removeItem("userId");
+                    localStorage.removeItem("userName");
+                    localStorage.removeItem("userEmail");
+
+                    // Remove the current user's information from the form fields
+                    document.getElementById("author").value = "";
+
+                    // Hide the logged-in user's information
+                    if (document.getElementById("userDetails") !== null) {
+                        document.getElementById("userDetails").style.display = "none";
+                    }
+
+                    // Display the login button
+                    if (document.getElementById("loginButton") !== null) {
+                        document.getElementById("loginButton").style.display = "inline-block";
+                    }
+
+                    // Hide the logout button
+                    if (document.getElementById("logoutButton") !== null) {
+                        document.getElementById("logoutButton").style.display = "none";
+                    }
+
+                    // Inform the user that they are logged out
+                    alert("You have been successfully logged out.");
+                } else {
+                    alert("You are not currently logged in. Please log in first.");
+                }
+            }
+        </script>
+
+        <script>
+            jQuery(document).ready(function ($) {
+            $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+            } else {
+            $('#back-to-top').fadeOut();
+            }
+            });
+
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+            $('body,html').animate({
+            scrollTop: 0
+            }, 400);
+            return false;
+            });
+            });
+        </script>
+    </body>
+</html>

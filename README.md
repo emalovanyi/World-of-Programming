@@ -1,1 +1,2 @@
-# World-of-Programming
+# awtclass
+Project from university class
